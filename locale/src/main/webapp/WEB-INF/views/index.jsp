@@ -15,9 +15,11 @@ window.addEventListener("load", function() {
 	anchors.forEach(function(el){
 		el.addEventListener("click", function(e) {
 			e.preventDefault();
-			document.cookie = "lang=ko;" + 
-							  "path=" + "${pageContext.request.contextPath}" + ";" +
-							  "max-age=" + (30*24*60*60)
+			document.cookie = 
+				"lang=" + this.getAttribute("data-lang" ) + ";" +
+				"path=" + "${pageContext.request.contextPath}" + ";" +
+				"max-age=" + (30*24*60*60);
+				location.reload();
 		});
 	});
 });
@@ -26,7 +28,7 @@ window.addEventListener("load", function() {
 <body>
 	<h1><spring:message code="index.title" /></h1>
 	<div id="languages">
-		<a href="">KO</a><a href="" >EN</a>
+		<a href="" data-lang="ko">KO</a><a href="" data-lang="en">EN</a>
 	</div>
 </body>
 </html>
