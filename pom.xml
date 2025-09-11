@@ -23,8 +23,10 @@
 		
 	<modules>
 		<module>hellospring</module>
+		<module>emaillist03</module>
 		<module>logex</module>
 		<module>aop</module>
-		<module>emaillist03</module>
+		<module>fileupload</module>
+		<module>locale</module>
 	</modules>
 </project>
