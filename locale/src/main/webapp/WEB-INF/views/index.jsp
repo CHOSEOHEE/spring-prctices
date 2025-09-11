@@ -9,6 +9,19 @@
 <meta charset="UTF-8">
 <title>Insert title here</title>
 <link href="${pageContext.request.contextPath }/assets/css/index.css" type="text/css" rel="stylesheet">
+<script>
+window.addEventListener("load", function() {
+	var anchors = document.querySelectorAll('#lanugages a');
+	anchors.forEach(function(el){
+		el.addEventListener("click", function(e) {
+			e.preventDefault();
+			document.cookie = "lang=ko;" + 
+							  "path=" + "${pageContext.request.contextPath}" + ";" +
+							  "max-age=" + (30*24*60*60)
+		});
+	});
+});
+</script>
 </head>
 <body>
 	<h1><spring:message code="index.title" /></h1>
