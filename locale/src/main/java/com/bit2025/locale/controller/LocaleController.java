@@ -9,17 +9,15 @@ import jakarta.servlet.http.HttpServletRequest;
 
 @Controller
 public class LocaleController {
-	
-	private static final String localResolver = null;
+
 	@Autowired
 	private LocaleResolver localeResolver;
 	
 	@RequestMapping("/")
 	public String index(HttpServletRequest request) {
 		String lang = localeResolver.resolveLocale(request).getLanguage();
-		System.out.println("Language Code: " + lang);
+		System.out.println("Language Code:" + lang);
 		
 		return "index";
 	}
-	
 }
