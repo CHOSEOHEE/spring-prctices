@@ -24,6 +24,6 @@ public class CDPlayerxmlConfigTest {
 	
 	@Test
 	public void testPlay() {
-		assertEquals("playing 봉봉 by 김하온", cdPlayer.play());
+		assertEquals("playing 붕붕 by 김하온", cdPlayer.play());
 	}
 }

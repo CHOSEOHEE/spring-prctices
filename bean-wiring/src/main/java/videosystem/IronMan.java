@@ -2,11 +2,11 @@ package videosystem;
 
 public class IronMan implements DigitalVideoDisc {
 	private static final String title = "Iron Man";
-	private static final String studio = "Mavel";
+	private static final String studio = "Marvel";
 	
 	@Override
 	public String play() {
-		return "playing "+ studio + "'s" + title;
+		return "Playing "+ studio + "'s " + title;
 	}
 
 }

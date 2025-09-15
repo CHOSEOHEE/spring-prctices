@@ -12,7 +12,7 @@ import org.springframework.test.context.junit.jupiter.SpringExtension;
 import soundsystem.CDPlayer;
 
 @ExtendWith(SpringExtension.class)
-@ContextConfiguration(classes={CDPlayer.class})
+@ContextConfiguration(classes={CDPlayerConfig.class})
 public class CDPlayerJavaConfigTest {
 	@Autowired
 	CDPlayer cdPlayer;
@@ -24,6 +24,6 @@ public class CDPlayerJavaConfigTest {
 	
 	@Test
 	public void testPlay() {
-		assertEquals("playing 봉봉 by 김하온", cdPlayer.play());
+		assertEquals("playing 붕붕 by 김하온", cdPlayer.play());
 	}
 }
