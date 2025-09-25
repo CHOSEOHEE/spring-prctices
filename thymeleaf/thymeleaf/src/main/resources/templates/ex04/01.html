@@ -16,8 +16,8 @@
 		<tr
 			th:style="${status.first} ? 'color: red' : (${status.last} ? 'color: blue' : '')"
 			th:alt-title="${status.even} ? 'even' : 'odd'">
-			<td th:text="|[${status.size - status.index}]|"></td>
-			<td th:text="|[${status.index}:${status.count}]|"></td>
+			<td th:text="${'-' + (status.size - status.index) + '-'}"></td>
+			<td th:text="|-${status.index}:${status.count}]-|"></td>
 			<td>[[${vo.no}]]:[[${vo.name}]]</td>
 		</tr>
 	</table>
